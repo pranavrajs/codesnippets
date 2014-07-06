@@ -3,10 +3,8 @@
 int main()
 {
 
-	long long unsigned int num;
+	long long unsigned int num,fact,subs,temp;
 	scanf("%llu",&num);
-	long long unsigned int prod,subs,temp;
-
 	if(num==1)
 	{
 		printf("1");
@@ -28,17 +26,17 @@ int main()
 
 	*/
 	subs=num-2;
-	prod=num;
-	temp=prod;
+	fact=num;
+	temp=fact;
 	while(subs>=2)
 	{
 		temp=temp+subs;
-		prod*=temp;
+		fact*=temp;
 		subs-=2;
 	}
 	/* If number is odd multiply it with roundUp(num/2) */
 	if(num%2!=0)
-		prod*=(num/2+1);
+		fact*=(num/2+1);
 
-	printf("%llu",prod);
+	printf("%llu",fact);
 }
