@@ -5,7 +5,7 @@ int main()
 
 	long long unsigned int num,fact,subs,temp;
 	scanf("%llu",&num);
-	if(num==1)
+	if(num==1 || num == 0)
 	{
 		printf("1");
 		return 0;
